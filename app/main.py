@@ -1,10 +1,14 @@
 from fastapi import FastAPI, UploadFile
+from dotenv import load_dotenv
 
-from app.utils import read_file, json_load
-from app.model import model
+from app.utils import read_file, json_load, load_configuration
+from app.model import Model
 
+load_dotenv()
 
 app = FastAPI()
+model = Model(config=load_configuration("config.yaml"))
+model.load()
 
 
 @app.post("/predict")

@@ -1,0 +1,9 @@
+run_id: e7457ecc40644678bac93f16f30daea8
+artifact_name: model.onnx
+model_name: model.onnx
+
+feature: mfcc
+feature_params:
+  sr: 16000
+  hop_length: 400
+  n_mfcc: 40
