@@ -65,6 +65,10 @@ class Model:
         input = self._preprocess(wav_data)
         preds = self.model.run(
             None,
-            {self.model.get_inputs()[0].name: np.expand_dims(input, axis=0)},
+            {
+                self.model.get_inputs()[0].name: np.expand_dims(
+                    input.astype(np.float32), axis=0
+                )
+            },
         )
         return np.argmax(preds[0][0])
