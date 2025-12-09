@@ -11,6 +11,11 @@ model = Model(config=load_configuration("config.yaml"))
 model.load()
 
 
+@app.get("/health")
+def check_health():
+    return {"status": "ok"}
+
+
 @app.post("/predict")
 def predict(file: UploadFile):
     langs = json_load("static/langs.json")
