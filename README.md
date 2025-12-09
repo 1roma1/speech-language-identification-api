@@ -43,6 +43,6 @@ The API service will be accessible at `http://127.0.0.1:8000`
 **Example Response (JSON)**
 ```
 {
-  "language": 6638
+  "language": "English"
 }
 ```
