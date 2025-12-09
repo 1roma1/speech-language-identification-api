@@ -6,7 +6,7 @@ from src.model import Model
 
 load_dotenv()
 
-app = FastAPI(root_path="speech-lang-id-api")
+app = FastAPI(root_path="/speech-lang-id-api")
 model = Model(config=load_configuration("config.yaml"))
 model.load()
 
