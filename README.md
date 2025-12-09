@@ -39,7 +39,7 @@ The API service will be accessible at `http://127.0.0.1:8000`
 | --- | --- | --- |
 | `/predict `| `POST` |  Accepts a wav file and returns the predicted language.
 
-```
+
 **Example Response (JSON)**
 ```
 {
