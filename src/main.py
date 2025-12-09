@@ -1,8 +1,8 @@
 from fastapi import FastAPI, UploadFile
 from dotenv import load_dotenv
 
-from app.utils import read_file, json_load, load_configuration
-from app.model import Model
+from src.utils import read_file, json_load, load_configuration
+from src.model import Model
 
 load_dotenv()
 
