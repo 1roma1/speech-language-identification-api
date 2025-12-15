@@ -37,6 +37,6 @@ jobs:
             docker container stop speech-lang-id-api
             docker container rm speech-lang-id-api
             docker container run -d --name speech-lang-id-api \
-             -p 127.0.0.1:8080:8080 -e MLFLOW_TRACKING_USERNAME=${{ secrets.MLFLOW_TRACKING_USERNAME }} \
+             -p 127.0.0.1:8081:8080 -e MLFLOW_TRACKING_USERNAME=${{ secrets.MLFLOW_TRACKING_USERNAME }} \
              -e MLFLOW_TRACKING_PASSWORD=${{ secrets.MLFLOW_TRACKING_PASSWORD }} \
              -e MLFLOW_URL=${{ secrets.MLFLOW_URL }} romansaiko/speech-lang-id-api
